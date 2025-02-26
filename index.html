@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-200">
-    
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-1/5 bg-gray-900 text-white p-5 flex flex-col gap-4">
+            <h2 class="text-xl font-bold">Admin Dashboard</h2>
+            <nav class="flex flex-col gap-3">
+                <a href="#" class="flex items-center gap-2"><span>🏠</span> Accueil</a>
+                <a href="#" class="flex items-center gap-2"><span>📊</span> Statistiques</a>
+                <a href="#" class="flex items-center gap-2"><span>⚙️</span> Paramètres</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 bg-gray-100 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold">Bienvenue, Admin !</h1>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Déconnexion</button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-gray-500">Utilisateurs</h2>
+                    <p class="text-2xl font-bold">1,245</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-gray-500">Ventes</h2>
+                    <p class="text-2xl font-bold">€5,320</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-gray-500">Support Tickets</h2>
+                    <p class="text-2xl font-bold">32</p>
+                </div>
+            </div>
+
+            <!-- Transactions Table -->
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-3">Dernières Transactions</h2>
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2">Utilisateur</th>
+                            <th class="py-2">Montant</th>
+                            <th class="py-2">Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-2">Jean Dupont</td>
+                            <td class="py-2">€250</td>
+                            <td class="py-2 text-green-600">✅ Payé</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2">Marie Curie</td>
+                            <td class="py-2">€125</td>
+                            <td class="py-2 text-red-600">❌ En attente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>      
 </body>
 </html>
